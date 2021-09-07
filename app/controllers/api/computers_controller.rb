@@ -1,7 +1,7 @@
 class Api::ComputersController < ApplicationController
   
   def index
-    render json: Computer.all
+    render json: Computer.all.order(:id)
   end
 
   def create
@@ -16,14 +16,14 @@ class Api::ComputersController < ApplicationController
   def update
     @computer = Computer.find(params[:id])
     if (@computer.update(computers_params))
-      render json:computers
+      render json: @computer
     else
     end
 
   end
 
   def destroy
-    @computers = Computer.find(params[:id])
+    @computer = Computer.find(params[:id])
     render json: @computer.destroy
   end
 

@@ -17,8 +17,8 @@ const Computer = (props) => {
     purpose = {purpose}
     os = {os}
     updateComputers = {updateComputers}
-    deleteComputers = {deleteComputers}
     />
+    <button onClick={() => deleteComputers(id)}>Delete Computer</button>
     </div>
   )
 }

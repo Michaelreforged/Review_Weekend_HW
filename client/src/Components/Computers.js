@@ -52,7 +52,6 @@ const Computers = () => {
     <div>
     <h1>Computers</h1>
     <ComputerForm 
-    addComputers = {addComputers}
     addComputers={addComputers}/>
     {computers.map((computers)=> (
       <Computer 
