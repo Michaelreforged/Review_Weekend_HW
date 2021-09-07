@@ -14,9 +14,10 @@ const ComputerForm = (props) => {
     }
 
   }
+  const style = (props.owner ? "computerDiv" : "computerDiv2")
 
   return(
-    <div className="computerDiv">
+    <div className={style}>
       <h1>Computer form</h1>
       <form onSubmit={handleSubmit}>
       <p>Owner: </p>

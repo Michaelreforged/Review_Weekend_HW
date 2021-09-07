@@ -1,7 +1,23 @@
 .computerDiv {
+
   margin: 20px;
   padding: 20px;
   background-color: #2994cd;
   color: black;
   font-weight: 625;
+  max-width: 600px;
+  box-shadow: 10px 10px 5px #5a5a62;
+  
 }
+
+.computerDiv2 {
+  margin: 20px;
+  padding: 20px;
+  background-color: #5a5a62;
+  color: #f6d541;
+  font-weight: 625;
+  max-width: 600px;
+  box-shadow: 10px 10px 5px #20317b;
+
+}
+

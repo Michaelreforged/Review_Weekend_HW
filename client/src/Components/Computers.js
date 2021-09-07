@@ -6,6 +6,8 @@ import ComputerForm from "./ComputerForm";
 const Computers = () => {
 
   const [computers, setComputers] = useState([]);
+  const [form,setFrom]=useState(false)
+
   useEffect(()=> {
     getComputers();
   },[])
@@ -49,10 +51,14 @@ const Computers = () => {
   };
 
   return(
+    
     <div>
     <h1>Computers</h1>
-    <ComputerForm 
-    addComputers={addComputers}/>
+    <button onClick={() => setFrom(!form)}>
+    {form ? "Close Add Computer" : "Show Add Computer"}
+    </button>
+    {form && (<ComputerForm 
+    addComputers={addComputers}/>)}
     {computers.map((computers)=> (
       <Computer 
       updateComputers={updateComputers}
