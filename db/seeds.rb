@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+c1 = Computer.create(owner: "Michael", purpose: "Gaming", os:"Windows")
+c1 = Computer.create(owner: "Angela", purpose: "Content Consumption", os:"Windows")
+c1 = Computer.create(owner: "Monica", purpose: "Work", os:"Mac OS")
+
+puts "seeded Computer size: #{Computer.all.size}"
