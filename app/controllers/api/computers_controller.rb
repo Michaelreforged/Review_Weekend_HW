@@ -1,5 +1,6 @@
 class Api::ComputersController < ApplicationController
-  
+  before_action :set_computer, only:[:update, :destroy]
+
   def index
     render json: Computer.all.order(:id)
   end
@@ -7,14 +8,13 @@ class Api::ComputersController < ApplicationController
   def create
     computer = Computer.new(computers_params)
     if (computer.save)
-      render json:computer
+      render json: computer
     else
       
     end
   end
 
   def update
-    @computer = Computer.find(params[:id])
     if (@computer.update(computers_params))
       render json: @computer
     else
@@ -23,7 +23,6 @@ class Api::ComputersController < ApplicationController
   end
 
   def destroy
-    @computer = Computer.find(params[:id])
     render json: @computer.destroy
   end
 
@@ -32,5 +31,7 @@ class Api::ComputersController < ApplicationController
     params.require(:computer).permit(:owner,:purpose,:os)
   end
 
-
+  def set_computer
+    @computer = Computer.find(params[:id])
+  end
 end

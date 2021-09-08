@@ -14,7 +14,7 @@ const ComputerForm = (props) => {
     }
 
   }
-  const style = (props.owner ? "computerDiv" : "computerDiv2")
+  const style = (props.id ? "computerDiv3" : "computerDiv2")
 
   return(
     <div className={style}>

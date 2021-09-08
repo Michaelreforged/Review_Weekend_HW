@@ -6,6 +6,13 @@ Rails.application.routes.draw do
     put '/computers/:id', to:'computers#update'
     patch '/computers/:id', to:'computers#update'
     delete '/computers/:id', to:'computers#destroy'
+
+    get '/computers/:computer_id/parts', to:'parts#index'
+    post '/computers/:computer_id/parts', to:'parts#create'
+    put '/computers/:computer_id/parts/:id', to:'parts#update'
+    patch '/computers/:computer_id/parts/:id', to:'parts#update'
+    delete '/computers/:computer_id/parts/:id', to:'parts#destroy'
+
   end
 
 end

@@ -17,6 +17,17 @@
   color: #f6d541;
   font-weight: 625;
   max-width: 600px;
+  box-shadow: 10px 10px 5px #292931;
+
+}
+
+.computerDiv3 {
+  margin: 20px;
+  padding: 20px;
+  background-color: #a48b20;
+  color: #f6d541;
+  font-weight: 625;
+  max-width: 600px;
   box-shadow: 10px 10px 5px #20317b;
 
 }
